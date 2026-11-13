@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ta pratique est-elle tenable ? – GAP coaching</title>
+<style>
+:root{--bg:#F1F5FA;--card:#fff;--ink:#171C25;--mute:#55627a;--line:#d3dcea;--acc:#2864E8;--accbg:#e1eafc;--bad:#b4421f;--badbg:#fbe4da;--blue:#2864E8;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14243B;--card:#1b2f4b;--ink:#F1F5FA;--mute:#9db0cc;--line:#2c4466;--acc:#7ea4f5;--accbg:#1f3f73;--bad:#ff9d78;--badbg:#40241a;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#14243B;--card:#1b2f4b;--ink:#F1F5FA;--mute:#9db0cc;--line:#2c4466;--acc:#7ea4f5;--accbg:#1f3f73;--bad:#ff9d78;--badbg:#40241a;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;border-top:6px solid #2864E8;background:var(--bg);color:var(--ink);font:16px/1.55 "Barlow","Segoe UI",system-ui,sans-serif}
+main{max-width:720px;margin:0 auto;padding:24px 16px 48px}
+h1{font:800 clamp(28px,7vw,40px)/1.05 "Barlow Condensed","Arial Narrow",sans-serif;margin:0 0 14px}
+h2{font:700 22px/1.2 "Barlow Condensed","Arial Narrow",sans-serif;margin:0 0 6px}
+.nav{display:flex;gap:8px;overflow-x:auto;margin-bottom:16px;padding-bottom:4px}
+.nav button{white-space:nowrap;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:8px 14px;font:inherit;cursor:pointer}
+.nav button[aria-current=true]{background:var(--ink);color:var(--bg);font-weight:700}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px;margin-bottom:14px}
+.mute{color:var(--mute);font-size:14px}
+label{display:block;font-weight:600;margin:10px 0 4px}
+input,select{width:100%;font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px}
+.btn{width:100%;margin-top:14px;background:var(--ink);color:var(--bg);border:0;border-radius:10px;padding:14px;font:800 17px inherit;cursor:pointer}
+.opt{display:block;width:100%;text-align:left;margin-top:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;padding:12px;font:inherit;cursor:pointer}
+.opt.ok{background:var(--accbg);border-color:var(--acc)}.opt.ko{background:var(--badbg);border-color:var(--bad)}
+.big{font:800 34px/1.1 "Barlow Condensed","Arial Narrow",sans-serif}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:12px}
+.stat{background:var(--bg);border-radius:8px;padding:10px}.stat b{display:block;font-size:22px}
+.msg{background:var(--accbg);border-left:5px solid var(--acc);border-radius:8px;padding:12px 14px;margin:12px 0}
+.warn{background:var(--badbg);border-left:5px solid var(--bad);border-radius:8px;padding:12px 14px;margin:10px 0}
+.ck{display:flex;gap:10px;align-items:flex-start;font-weight:400;margin:8px 0}.ck input{width:auto;margin-top:5px}
+.ig{display:block;text-align:center;text-decoration:none;background:var(--blue);color:#fff;font-weight:800;border-radius:10px;padding:15px;margin-top:12px}
+.bar{height:6px;background:var(--line);border-radius:4px;margin-bottom:12px}.bar i{display:block;height:100%;background:var(--acc);border-radius:4px}
+.sec{background:transparent;border:1px solid var(--line);color:var(--ink);border-radius:10px;padding:12px;width:100%;margin-top:10px;font:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+@media print{.nav,.ig,.btn,.sec{display:none!important}body{background:#fff;color:#000}}
+</style>
+</head>
+<body>
+<main>
+<h1>Ta pratique est-elle tenable ?</h1>
+<div id="app"></div>
+</main>
+<script>
+
+var IG = "https://ig.me/m/anthony.gapcoaching";
+var app = document.getElementById("app");
+function $(i){return document.getElementById(i);}
+function cta(){
+ return '<div class="card mute" style="margin-top:14px">Ces outils donnent des repères généraux et ne remplacent pas une analyse et une programmation approfondies. Pour des conseils vraiment adaptés à toi, consulte un coach professionnel.<a class="ig" target="_blank" rel="noopener noreferrer" href="'+IG+'">En parler avec Anthony – GAP coaching</a></div>';
+}
+
+
+/* 5. Checklist */
+function checklist(){
+ var L=["Je dors moins de 7 h et je me réveille fatigué.","Je n’ose pas raconter mes entraînements à mes amis.","Je ne note pas mes charges ni mes répétitions.","Je redoute les repas de famille ou les sorties à cause de mon alimentation.","Je n’atteins pas mon total de protéines la plupart des jours.","Je culpabilise quand je saute une séance.","Je raccourcis l’amplitude pour charger plus lourd.","Je me sens seul avec ma pratique, sans personne avec qui en parler vraiment.","Je pousse chaque série à l’échec, sans jamais lever le pied.","Je me compare sans cesse aux autres et mes progrès ne me suffisent jamais.","Je répète toujours les mêmes schémas de mouvement et mes articulations commencent à râler.","Je n’ai pas prévu de semaine plus légère depuis plusieurs mois."];
+ app.innerHTML='<section class="card"><p class="mute">Coche les phrases qui te ressemblent, sans te juger.</p>'+
+ L.map(function(t,i){return '<label class="ck"><input type="checkbox" class="c" id="k'+i+'"><span>'+t+'</span></label>';}).join("")+
+ '<div class="msg" id="sc">Aucune case cochée pour l’instant.</div><button class="btn" id="pr">Télécharger en PDF</button><p class="mute">Dans la fenêtre qui s’ouvre, choisis « Enregistrer au format PDF ».</p></section>'+cta();
+ document.querySelectorAll(".c").forEach(function(c){c.onchange=function(){
+  var n=document.querySelectorAll(".c:checked").length;
+  $("sc").textContent=n===0?"Aucune case cochée : ton rythme semble tenable. Continue à l’écouter.":n<=3?n+" point"+(n>1?"s":"")+" de fragilité : choisis-en un seul et travaille dessus 4 semaines.":"Ton rythme risque de ne pas tenir dans la durée. C’est le bon moment pour ajuster, et pour en parler avec quelqu’un.";
+ };});
+ $("pr").onclick=function(){try{window.print();}catch(e){}};
+}
+
+checklist();
+</script>
+</body>
+</html>
